@@ -65,13 +65,17 @@ html, body {
 }
 
 .main-container {
-  margin: 10vh auto 0 auto; /* midtstill uten absolute posisjonering */
+  margin: 100px auto 0 auto; /* midtstill uten absolute posisjonering */
   width: 100%;
   max-width: 1000px; /* valgfritt for store skjermer */
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   background-color: rgba(0, 0, 0, 0.027);
-  padding: 1px;
+  padding: 20px;
   border-radius: 10px;
+}
+
+.hello-container {
+  margin-top: 0px;
 }
 
 .img-kenneth {
