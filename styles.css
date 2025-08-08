@@ -34,12 +34,13 @@ html, body {
   font-size: 18px;
   white-space: nowrap;
   font-family: sans-serif;
-  color: rgb(237, 243, 215);
+  color: rgb(255, 255, 255);
   padding: 5px;
-  color: rgba(0, 0, 0, 0.795);
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: none;
 }
 
-/* Responsiv header */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -55,7 +56,6 @@ html, body {
   }
 }
 
-/* Fikset container */
 .container {
   margin-top: 5vh;
   display: flex;
@@ -85,6 +85,7 @@ html, body {
 
 .p-skills {
   width: 100%;
+  padding: 1px;
   max-width: 500px;
   display: flex;
   flex-wrap: wrap;
@@ -93,6 +94,10 @@ html, body {
   gap: 1px;
 }
 
+.p-skills p {
+  padding: 1px;
+  margin: 1px;
+}
 @media (max-width: 600px) {
   .p-skills {
     flex-direction: column;
