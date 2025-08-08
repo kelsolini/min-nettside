@@ -1,6 +1,6 @@
 html, body {
-  position: relative;
   margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
 }
 
@@ -22,7 +22,7 @@ html, body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 30%; /* Make them take full width */
+  flex: 1;
   text-align: center;
   gap: 3vh;
 }
@@ -31,8 +31,11 @@ html, body {
   cursor: pointer;
   font-size: 18px;
   white-space: nowrap;
+  font-family: sans-serif;
+  color: rgb(237, 243, 215);
 }
 
+/* Responsiv header */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -40,7 +43,6 @@ html, body {
     text-align: center;
   }
   .l-header, .r-header {
-    display: flex;
     justify-content: center;
     width: 100%;
   }
@@ -49,6 +51,7 @@ html, body {
   }
 }
 
+/* Fikset container */
 .container {
   margin-top: 5vh;
   display: flex;
@@ -58,51 +61,46 @@ html, body {
 }
 
 .main-container {
-  position: absolute;
-  left: 50%;
-  top: 10vh;
-  width: 100vh;
+  margin: 10vh auto 0 auto; /* midtstill uten absolute posisjonering */
+  width: 100%;
+  max-width: 1000px; /* valgfritt for store skjermer */
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   background-color: rgba(0, 0, 0, 0.072);
-  align-items: center;
-  transform: translate(-50%);
-  z-index: 1;
-}
-
-.header-btn {
-  font-family: sans-serif;
-  color: rgb(237, 243, 215);
+  padding: 1rem;
 }
 
 .img-kenneth {
-  width: 20vh;
+  width: 200px;
+  max-width: 80%;
   border-radius: 50%;
-  margin: 7vh;
+  margin-top: 50px;
+  margin-bottom: 25px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .p-skills {
-  width: 40vh;
+  width: 100%;
+  max-width: 500px;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
+  gap: 1rem;
 }
 
 @media (max-width: 600px) {
   .p-skills {
-    width: 90vh;           /* bredere for mobil */
-    flex-direction: column; /* stable elementene vertikalt */
+    flex-direction: column;
     justify-content: center;
-    gap: 1rem;             /* litt avstand mellom elementene */
+    gap: 1rem;
   }
 }
 
-/* Bør vurdere om jeg skal ha en egen classe for h2 overskrifter på siden senere. */
+/* h2 med linje under */
 h2 {
   position: relative;
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   padding-bottom: 5px;
 }
 
@@ -112,8 +110,8 @@ h2::after {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 75%;      
-  height: 1px;      
+  width: 75%;
+  height: 1px;
   background-color: rgba(0, 0, 0, 0.521);
   border-radius: 2px;
 }
